@@ -9,6 +9,14 @@
 namespace Curso\Repositories;
 
 
-class ClientRepositoryEloquent {
+use Curso\Interfaces\ClientInterface;
+use Curso\Models\Client;
+use Prettus\Repository\Eloquent\BaseRepository;
+
+class ClientRepositoryEloquent extends BaseRepository implements ClientInterface{
+
+    public function model(){
+        return Client::class;
+    }
 
 }
